@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Électronique",
+    "description": "Appareils électroniques et gadgets"
+  },
+  {
+    "id": 2,
+    "name": "Livres",
+    "description": "Livres de tous genres"
+  },
+  {
+    "id": 3,
+    "name": "Vêtements",
+    "description": "Vêtements pour hommes, femmes et enfants"
+  }
+]
