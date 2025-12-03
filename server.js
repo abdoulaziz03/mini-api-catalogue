@@ -1,41 +1,35 @@
-cat > server.js << 'EOF'
 const express = require('express');
-const categoriesRouter = require('./routes/categories');
-const productsRouter = require('./routes/products');
-
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = 3000;
 
 // Middleware pour parser le JSON
 app.use(express.json());
 
-// Routes
-app.use('/api/categories', categoriesRouter);
-app.use('/api/products', productsRouter);
+// Import des routes
+const categoriesRoutes = require('./routes/categories');
+const productsRoutes = require('./routes/products');
 
-// Route racine
+// Utilisation des routes
+app.use('/api/categories', categoriesRoutes);
+app.use('/api/products', productsRoutes);
+
+// Route par défaut
 app.get('/', (req, res) => {
-  res.json({
-    message: 'Bienvenue sur l\'API Catalogue',
-    endpoints: {
-      categories: '/api/categories',
-      products: '/api/products',
-      documentation: 'Voir README.md pour plus d\'informations'
-    }
-  });
+  res.json({ message: 'API de catalogue - Bienvenue !' });
 });
 
-// Route 404
+// Middleware pour les routes non trouvées
 app.use((req, res) => {
-  res.status(404).json({ 
-    error: 'Route non trouvée',
-    availableRoutes: ['/', '/api/categories', '/api/products']
-  });
+  res.status(404).json({ error: 'Route non trouvée' });
 });
 
-// Démarrer le serveur
-app.listen(PORT, () => {
-  console.log(`Serveur démarré sur http://localhost:${PORT}`);
-  console.log(`Documentation: http://localhost:${PORT}/`);
+// Gestion des erreurs
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: 'Erreur serveur' });
 });
-EOF
+
+// Démarrage du serveur
+app.listen(port, () => {
+  console.log(`API démarrée sur http://localhost:${port}`);
+});

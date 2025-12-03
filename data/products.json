@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Smartphone XYZ",
+    "price": 599.99,
+    "categoryId": 1,
+    "stock": 50
+  },
+  {
+    "id": 2,
+    "name": "Livre de programmation",
+    "price": 39.99,
+    "categoryId": 2,
+    "stock": 100
+  },
+  {
+    "id": 3,
+    "name": "T-shirt en coton",
+    "price": 19.99,
+    "categoryId": 3,
+    "stock": 200
+  }
+]
