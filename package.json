@@ -1,0 +1,24 @@
+{
+  "name": "mini-api-catalogue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdoulaziz03/mini-api-catalogue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/abdoulaziz03/mini-api-catalogue/issues"
+  },
+  "homepage": "https://github.com/abdoulaziz03/mini-api-catalogue#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
