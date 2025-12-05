@@ -331,11 +331,11 @@ async function loadVisualizations() {
 }
 
 // Gestionnaires d'événements
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     checkAuth();
     loadStats();
-    loadCategories();
-    loadProducts();
+    await loadCategories();
+    await loadProducts();
     loadVisualizations();
 
     // Boutons d'ajout
@@ -515,7 +515,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const categoryFilter = document.getElementById('category-filter').value;
 
         let filteredProducts = allProducts.filter(product =>
-            product.name.toLowerCase().includes(searchTerm)
+            product.name.toLowerCase().includes(searchTerm) ||
+            product.price.toString().includes(searchTerm) ||
+            product.stock.toString().includes(searchTerm) ||
+            (allCategories.find(c => c.id === product.categoryId)?.name.toLowerCase().includes(searchTerm))
         );
 
         if (categoryFilter) {
