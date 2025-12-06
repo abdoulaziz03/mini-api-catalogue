@@ -41,4 +41,4 @@ Le serveur démarrera sur http://localhost:3000
 - GET / : Message de bienvenue
 
   
-Sitayeb Ryma & Toure Abdoulaziz
+Sitayeb Ryma & Toure Abdoul-aziz
