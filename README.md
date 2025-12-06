@@ -3,7 +3,7 @@
 API de catalogue de produits avec authentification.
 
 ## Installation
-1. Assurez-vous d'avoir Node.js installé.
+1. Assurez-vous d'avoir Node.js installé ou installer
 2. Clonez le repository.
 3. Installez les dépendances : `npm install`
 
