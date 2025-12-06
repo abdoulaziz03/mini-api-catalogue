@@ -3,8 +3,8 @@
 API de catalogue de produits avec authentification.
 
 ## Installation
-1. Assurez-vous d'avoir Node.js installé ou installer
-2. Clonez le repository.
+1. Assurez-vous d'avoir Node.js installé
+2. Clonez le repository : https://github.com/abdoulaziz03/mini-api-catalogue.git
 3. Installez les dépendances : `npm install`
 
 ## Lancement
@@ -32,6 +32,10 @@ Le serveur démarrera sur http://localhost:3000
 - POST /api/products : Créer un nouveau produit (body: {name, price, categoryId, stock})
 - PUT /api/products/:id : Mettre à jour un produit (body: {name?, price?, categoryId?, stock?})
 - DELETE /api/products/:id : Supprimer un produit
+
+### Frontend (protégées par authentification)
+- GET /dashboard.html : Page du tableau de bord (nécessite connexion)
+- GET /login.html : Page de connexion
 
 ### Autres
 - GET / : Message de bienvenue
