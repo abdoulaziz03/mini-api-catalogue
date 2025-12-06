@@ -115,7 +115,7 @@ const databaseUtils = {
     deleteProduct: (id) => {
         const products = readJSONFile(productsFile);
         const filteredProducts = products.filter(prod => prod.id !== id);
-        writeJSONFile(productsFile, products);
+        writeJSONFile(productsFile, filteredProducts);
     },
 
     getProductCount: () => {
