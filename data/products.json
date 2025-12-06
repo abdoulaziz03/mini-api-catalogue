@@ -19,5 +19,12 @@
     "price": 19.99,
     "categoryId": 3,
     "stock": 200
+  },
+  {
+    "id": 4,
+    "name": "Iphone 14 pro ",
+    "price": 600,
+    "categoryId": 1,
+    "stock": 12
   }
 ]
